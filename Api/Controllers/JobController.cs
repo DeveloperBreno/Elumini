@@ -38,18 +38,37 @@ namespace API.Controllers
         }
 
         [HttpGet(Name = "GetJobs")]
-        public IEnumerable<Job> Get()
+        public IActionResult Get(int page = 1, int pageSize = 10)
         {
             try
             {
-                return _eluminiDbContext.Jobs.Include(o => o.Text).Include(o => o.ParameterStatus).ToArray();
+                var totalJobs = _eluminiDbContext.Jobs.Count();
+
+                var jobs = _eluminiDbContext.Jobs
+                    .Include(o => o.Text)
+                    .Include(o => o.ParameterStatus)
+                    .OrderBy(o => o.Id) 
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToArray();
+
+                var result = new
+                {
+                    TotalItems = totalJobs,
+                    PageSize = pageSize,
+                    CurrentPage = page,
+                    Jobs = jobs
+                };
+
+                return Ok(result);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Error retrieving Jobs: {ex.Message}\nStackTrace: {ex.StackTrace}");
-                return (IEnumerable<Job>)StatusCode(500, "Internal Server Error");
+                return StatusCode(500, "Internal Server Error");
             }
         }
+
 
         [HttpPut(Name = "UpdateJob")]
         public IActionResult Update([FromBody] Job job)
@@ -64,6 +83,6 @@ namespace API.Controllers
                 _logger.LogError($"Error updating the Job: {ex.Message}\nStackTrace: {ex.StackTrace}");
                 return StatusCode(500, "Internal Server Error");
             }
-        }        
+        }
     }
 }
