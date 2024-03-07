@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Elumini.Tarefa.Application\Elumini.Tarefa.Application.csproj" />
+    <ProjectReference Include="..\Elumini.Tarefa.Domain\Elumini.Tarefa.Domain.csproj" />
+    <ProjectReference Include="..\Elumini.Tarefa.Infraestrutura\Elumini.Tarefa.Infraestrutura.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Worker\" />
+  </ItemGroup>
+
+</Project>
