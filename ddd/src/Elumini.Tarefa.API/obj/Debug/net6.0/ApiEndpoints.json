@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "Elumini.Tarefa.API.Controllers.TarefaController",
+    "Method": "Get",
+    "RelativePath": "Tarefa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Elumini.Tarefa.API.Controllers.TarefaController",
+    "Method": "Criar",
+    "RelativePath": "Tarefa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tarefa",
+        "Type": "Elumini.Tarefa.Domain.Entites.Tarefa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

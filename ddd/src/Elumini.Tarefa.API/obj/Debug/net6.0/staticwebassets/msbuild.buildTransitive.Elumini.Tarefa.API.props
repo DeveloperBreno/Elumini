@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Elumini.Tarefa.API.props" />
+</Project>

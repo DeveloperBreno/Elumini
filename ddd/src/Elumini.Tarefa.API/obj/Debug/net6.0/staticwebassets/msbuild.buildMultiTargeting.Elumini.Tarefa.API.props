@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Elumini.Tarefa.API.props" />
+</Project>

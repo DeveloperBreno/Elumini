@@ -1,5 +1,6 @@
 ﻿using Elumini.Tarefa.Application.Services;
 using Elumini.Tarefa.Domain.Interfaces;
+using Elumini.Tarefa.Infraestrutura.Context;
 using Elumini.Tarefa.Infraestrutura.Repository;
 
 namespace Elumini.Tarefa.API.Dependency
@@ -8,8 +9,8 @@ namespace Elumini.Tarefa.API.Dependency
     {
         public static IServiceCollection ResolverDependecy(this IServiceCollection services)
         {
-            services.AddScoped<IProdutoRepository, ProdutoRepository>();
-            services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<ITarefaRepository, TarefaRepository>();
+            services.AddScoped<ITarefaService, TarefaService>();
 
             return services;    
         }

@@ -1,0 +1,11 @@
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\bin\Debug\net6.0\Elumini.Tarefa.Domain.deps.json
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\bin\Debug\net6.0\Elumini.Tarefa.Domain.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\bin\Debug\net6.0\Elumini.Tarefa.Domain.pdb
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\Elumini.Tarefa.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\Elumini.Tarefa.Domain.AssemblyInfoInputs.cache
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\Elumini.Tarefa.Domain.AssemblyInfo.cs
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\Elumini.Tarefa.Domain.csproj.CoreCompileInputs.cache
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\Elumini.Tarefa.Domain.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\refint\Elumini.Tarefa.Domain.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\Elumini.Tarefa.Domain.pdb
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Domain\obj\Debug\net6.0\ref\Elumini.Tarefa.Domain.dll

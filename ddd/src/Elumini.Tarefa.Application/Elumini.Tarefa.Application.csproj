@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Elumini.Tarefa.Domain\Elumini.Tarefa.Domain.csproj" />
+    <ProjectReference Include="..\Elumini.Tarefa.Infraestrutura\Elumini.Tarefa.Infraestrutura.csproj" />
   </ItemGroup>
 
 </Project>
