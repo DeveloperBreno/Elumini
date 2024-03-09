@@ -1,18 +1,18 @@
-version: '3'
+version: '2'
 
 services:
   rabbitmq:
-    image: "rabbitmq:3-management"  # Imagem do RabbitMQ com console de gerenciamento
+    image: "rabbitmq:3-management"
     container_name: rabbitmq_server
     ports:
-      - "5672:5672"   # Porta padrão para conexões
-      - "15672:15672" # Porta para o console de gerenciamento
+      - "5672:5672"
+      - "15672:15672"
     environment:
-      RABBITMQ_DEFAULT_VHOST: "/jobs_vhost"  # VHost
-      RABBITMQ_DEFAULT_USER: "rabbitmq_user"  # Nome de usuário
-      RABBITMQ_DEFAULT_PASS: "rabbitmq_password"  # Senha
+      RABBITMQ_DEFAULT_VHOST: "/"
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
     volumes:
-      - rabbitmq_data:/var/lib/rabbitmq  # Volume para persistir os dados do RabbitMQ
+      - rabbitmq_data:/var/lib/rabbitmq
 
 volumes:
   rabbitmq_data:

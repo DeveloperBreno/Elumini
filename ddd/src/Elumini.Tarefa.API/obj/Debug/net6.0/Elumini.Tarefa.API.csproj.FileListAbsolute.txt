@@ -86,3 +86,6 @@ E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\ref
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.pdb
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.genruntimeconfig.cache
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\ref\Elumini.Tarefa.API.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\RabbitMQ.Client.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Threading.Channels.dll

@@ -11,6 +11,7 @@ namespace Elumini.Tarefa.API.Dependency
         {
             services.AddScoped<ITarefaRepository, TarefaRepository>();
             services.AddScoped<ITarefaService, TarefaService>();
+            services.AddScoped<IMensageriaService, MensageriaService>();
 
             return services;    
         }

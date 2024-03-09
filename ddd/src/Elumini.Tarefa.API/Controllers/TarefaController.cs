@@ -10,14 +10,18 @@ namespace Elumini.Tarefa.API.Controllers
     {
         private readonly ITarefaService _tarefaService;
 
+        private readonly IMensageriaService _mensageriaService;
+
         private readonly ILogger<TarefaController> _logger;
 
         public TarefaController(
             ILogger<TarefaController> logger,
-            ITarefaService produtoService)
+            ITarefaService produtoService,
+            IMensageriaService mensageriaService)
         {
             _logger = logger;
             _tarefaService = produtoService;
+            _mensageriaService = mensageriaService;
         }
 
         [HttpGet(Name = "tarefas")]
@@ -39,9 +43,15 @@ namespace Elumini.Tarefa.API.Controllers
         [HttpPost(Name = "tarefa")]
         public IActionResult Criar(TarefaViewModel tarefaViewModel)
         {
-            // aqui chama a fila para inserir a tarefa view model
-            //_tarefaFila.Inserir(tarefaViewModel)
-            return Ok();
+            var body = _mensageriaService.SerializeObjectToBytes(tarefaViewModel);
+            var ok = _mensageriaService.Inserir(body, MensageriaQueue.CriarOrEditarTarefa).Result;
+
+            if (ok)
+            {
+                return Ok();
+            }
+
+            return StatusCode(500);
         }
     }
 }
