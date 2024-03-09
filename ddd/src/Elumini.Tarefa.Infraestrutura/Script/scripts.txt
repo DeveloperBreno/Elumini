@@ -1,0 +1,5 @@
+﻿Gerar migration:
+dotnet ef migrations add {escrevaQualAlteracaoEstaMigrando} --project E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Infraestrutura
+
+Atualizar a base:
+dotnet ef database update --project E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.Infraestrutura

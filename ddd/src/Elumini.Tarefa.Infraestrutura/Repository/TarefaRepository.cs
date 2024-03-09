@@ -1,5 +1,6 @@
 ﻿using Elumini.Tarefa.Domain.Entites;
 using Elumini.Tarefa.Domain.Interfaces;
+using Elumini.Tarefa.Domain.ViewModels;
 using Elumini.Tarefa.Infraestrutura.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;

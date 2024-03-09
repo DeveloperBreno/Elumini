@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "tarefa",
-        "Type": "Elumini.Tarefa.Domain.Entites.Tarefa",
+        "Name": "tarefaViewModel",
+        "Type": "Elumini.Tarefa.Domain.ViewModels.TarefaViewModel",
         "IsRequired": true
       }
     ],

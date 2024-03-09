@@ -1,5 +1,5 @@
-using Elumini.Tarefa.Domain.Entites;
 using Elumini.Tarefa.Domain.Interfaces;
+using Elumini.Tarefa.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Elumini.Tarefa.API.Controllers
@@ -21,12 +21,26 @@ namespace Elumini.Tarefa.API.Controllers
         }
 
         [HttpGet(Name = "tarefas")]
-        public IActionResult Get() => Ok(_tarefaService.Get());
+        public IActionResult Get()
+        {
+            var tarefas = _tarefaService.Get()
+                .Select(t =>
+                new TarefaViewModel()
+                {
+                    id = t.Id,
+                    texto = t.Observacao.Texto,
+                    status = t.ParametroStatus.Valor,
+                    data = t.Date
+                });
+
+            return Ok(tarefas);
+        }
 
         [HttpPost(Name = "tarefa")]
-        public IActionResult Criar(Domain.Entites.Tarefa tarefa)
+        public IActionResult Criar(TarefaViewModel tarefaViewModel)
         {
-            _= _tarefaService.Inserir(tarefa);
+            // aqui chama a fila para inserir a tarefa view model
+            //_tarefaFila.Inserir(tarefaViewModel)
             return Ok();
         }
     }

@@ -1,9 +1,11 @@
 ﻿
+using Elumini.Tarefa.Domain.ViewModels;
+
 namespace Elumini.Tarefa.Domain.Interfaces
 {
     public interface ITarefaRepository
     {
-        Task Inserir(Entites.Tarefa tarefa);
+        Task Inserir(Domain.Entites.Tarefa tarefa);
 
         Entites.Tarefa[] Get();
     }

@@ -1,11 +1,4 @@
-﻿using Elumini.Tarefa.Domain.Entites;
-using Elumini.Tarefa.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Elumini.Tarefa.Domain.Interfaces;
 
 namespace Elumini.Tarefa.Application.Services
 {
@@ -31,7 +24,6 @@ namespace Elumini.Tarefa.Application.Services
             await _tarefaRepository.Inserir(tarefa);
             return true;
         }
-
 
     }
 }

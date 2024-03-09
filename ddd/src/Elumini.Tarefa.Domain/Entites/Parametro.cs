@@ -16,7 +16,7 @@ namespace Elumini.Tarefa.Domain.Entites
         [Required(ErrorMessage = "This field is required")]
         [Column("Chave", TypeName = "varchar(100)")]
         [MaxLength(100)]
-        public string Chave { get; set; }
+        public string Chave { get; private set; }
 
         /// <summary>
         /// Value
@@ -24,13 +24,14 @@ namespace Elumini.Tarefa.Domain.Entites
         [Required(ErrorMessage = "This field is required")]
         [Column("Valor", TypeName = "varchar(200)")]
         [MaxLength(200)]
-        public string Valor { get; set; }
+        public string Valor { get; private set; }
 
         /// <summary>
         /// order
         /// </summary>
         [Required(ErrorMessage = "This field is required")]
         [Column("Order", TypeName = "int")]
-        public int Ordem { get; set; }
+        public int Ordem { get; private set; }
+
     }
 }

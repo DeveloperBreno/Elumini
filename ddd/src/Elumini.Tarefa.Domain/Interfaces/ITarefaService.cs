@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Elumini.Tarefa.Domain.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Elumini.Tarefa.Domain.Interfaces
 {
     public interface ITarefaService
     {
-        Task<bool> Inserir(Entites.Tarefa tarefa);
+        Task<bool> Inserir(Domain.Entites.Tarefa tarefa);
 
         Entites.Tarefa[] Get();
     }
