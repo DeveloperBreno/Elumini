@@ -1,0 +1,11 @@
+<div *ngIf="tarefa">
+<h1 mat-dialog-title>Deseja confirmar a exclução?</h1>
+<div mat-dialog-content>
+  <p style="font: bold;">Tarefa:</p>
+  <p>{{tarefa.texto}} {{tarefa.status}}</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button  mat-raised-button color="warn" (click)="excluir()">Confirmar</button>
+</div>
+</div>

@@ -1,0 +1,37 @@
+
+<mat-card>
+
+  <div >
+      <h1 class="text-light">Detalhes Tarefa</h1>
+  </div>
+
+<div *ngIf="tarefa">
+
+<form  >
+
+
+<div class="input-box">
+  <mat-form-field>
+    <mat-label>Texto:</mat-label>
+   <input matInput type="text" class="form-control text-dark" value="{{tarefa.texto}}" disabled>
+    </mat-form-field>
+</div>
+
+<div  class="input-box">
+  <mat-form-field>
+    <mat-label>Data de Criação:</mat-label>
+    <input matInput type="text" class="form-control  text-dark" asp-for="LivroEmprestado" id="Livro" value="{{tarefa.data}}" disabled>
+    </mat-form-field>
+</div>
+
+
+<div class="btn-box">
+    <a  (click)="InativaTarefa()"  mat-raised-button color="warn">Inativar Usuário</a>
+    <a  routerLink=""  mat-raised-button>Voltar</a>
+</div>
+
+</form>
+</div>
+
+
+</mat-card>
