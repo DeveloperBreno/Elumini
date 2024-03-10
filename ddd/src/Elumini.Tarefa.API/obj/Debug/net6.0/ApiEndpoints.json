@@ -24,5 +24,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Elumini.Tarefa.API.Controllers.TarefaController",
+    "Method": "Atualizar",
+    "RelativePath": "Tarefa",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tarefaViewModel",
+        "Type": "Elumini.Tarefa.Domain.ViewModels.TarefaViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Elumini.Tarefa.API.Controllers.TarefaController",
+    "Method": "GetById",
+    "RelativePath": "Tarefa/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

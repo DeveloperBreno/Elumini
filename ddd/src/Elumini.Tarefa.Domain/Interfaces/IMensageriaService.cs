@@ -8,8 +8,10 @@
 
     public interface IMensageriaService
     {
-        Task<bool> Inserir(byte[] body, MensageriaQueue queueName);
+        Task<bool> InserirOuAtualizar(byte[] body, MensageriaQueue queueName);
 
         byte[] SerializeObjectToBytes(object obj);
+
+        string ObterMensagemAssync(MensageriaQueue queueName);
     }
 }

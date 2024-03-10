@@ -5,8 +5,9 @@ namespace Elumini.Tarefa.Domain.Interfaces
 {
     public interface ITarefaRepository
     {
-        Task Inserir(Domain.Entites.Tarefa tarefa);
+        Task<bool> InserirOrAtualizarAssync(TarefaViewModel tarefaViewModel);
 
         Entites.Tarefa[] Get();
+        Entites.Tarefa? GetById(int id);
     }
 }

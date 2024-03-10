@@ -9,8 +9,10 @@ namespace Elumini.Tarefa.Domain.Interfaces
 {
     public interface ITarefaService
     {
-        Task<bool> Inserir(Domain.Entites.Tarefa tarefa);
-
         Entites.Tarefa[] Get();
+
+        Entites.Tarefa? GetById(int id);
+
+        bool InserirOuAtualizar(TarefaViewModel tarefaViewModel);
     }
 }

@@ -1,4 +1,6 @@
-﻿using Elumini.Tarefa.Domain.Interfaces;
+﻿using Elumini.Tarefa.Domain.Entites;
+using Elumini.Tarefa.Domain.Interfaces;
+using Elumini.Tarefa.Domain.ViewModels;
 
 namespace Elumini.Tarefa.Application.Services
 {
@@ -16,14 +18,15 @@ namespace Elumini.Tarefa.Application.Services
             return _tarefaRepository.Get();
         }
 
-        public async Task<bool> Inserir(Domain.Entites.Tarefa tarefa)
+        public Domain.Entites.Tarefa? GetById(int id)
         {
-            // validacao
-
-            // insercao
-            await _tarefaRepository.Inserir(tarefa);
-            return true;
+            return _tarefaRepository.GetById(id);
         }
 
+        public bool InserirOuAtualizar(TarefaViewModel tarefaViewModel)
+        {
+            var ok = _tarefaRepository.InserirOrAtualizarAssync(tarefaViewModel).Result;
+            return ok;
+        }
     }
 }

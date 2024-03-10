@@ -1,6 +1,7 @@
 using Elumini.Tarefa.Domain.Interfaces;
 using Elumini.Tarefa.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.RegularExpressions;
 
 namespace Elumini.Tarefa.API.Controllers
 {
@@ -27,6 +28,7 @@ namespace Elumini.Tarefa.API.Controllers
         [HttpGet(Name = "tarefas")]
         public IActionResult Get()
         {
+
             var tarefas = _tarefaService.Get()
                 .Select(t =>
                 new TarefaViewModel()
@@ -37,14 +39,52 @@ namespace Elumini.Tarefa.API.Controllers
                     data = t.Date
                 });
 
-            return Ok(tarefas);
+            return Ok(new { result = tarefas });
+        }
+
+        [HttpGet("{id}", Name = "tarefaPorId")]
+        public IActionResult GetById(int id)
+        {
+            var tarefa = _tarefaService.GetById(id);
+
+            if (tarefa == null)
+            {
+                return NotFound();
+            }
+
+            var tarefaViewModel = new TarefaViewModel()
+            {
+                id = tarefa.Id,
+                texto = tarefa.Observacao.Texto,
+                status = tarefa.ParametroStatus.Valor,
+                data = tarefa.Date
+            };
+
+            return Ok(new
+            {
+                result = tarefaViewModel
+            });
         }
 
         [HttpPost(Name = "tarefa")]
         public IActionResult Criar(TarefaViewModel tarefaViewModel)
         {
-            var body = _mensageriaService.SerializeObjectToBytes(tarefaViewModel);
-            var ok = _mensageriaService.Inserir(body, MensageriaQueue.CriarOrEditarTarefa).Result;
+            byte[] body = _mensageriaService.SerializeObjectToBytes(tarefaViewModel);
+            var ok = _mensageriaService.InserirOuAtualizar(body, MensageriaQueue.CriarOrEditarTarefa).Result;
+
+            if (ok)
+            {
+                return Ok();
+            }
+
+            return StatusCode(500);
+        }
+
+        [HttpPut(Name = "tarefa")]
+        public IActionResult Atualizar(TarefaViewModel tarefaViewModel)
+        {
+            byte[] body = _mensageriaService.SerializeObjectToBytes(tarefaViewModel);
+            var ok = _mensageriaService.InserirOuAtualizar(body, MensageriaQueue.CriarOrEditarTarefa).Result;
 
             if (ok)
             {

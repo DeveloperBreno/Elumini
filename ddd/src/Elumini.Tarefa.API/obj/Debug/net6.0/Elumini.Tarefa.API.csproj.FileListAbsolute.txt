@@ -1,10 +1,3 @@
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.csproj.AssemblyReference.cache
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.GeneratedMSBuildEditorConfig.editorconfig
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.AssemblyInfoInputs.cache
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.AssemblyInfo.cs
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.csproj.CoreCompileInputs.cache
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.MvcApplicationPartsAssemblyInfo.cs
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.MvcApplicationPartsAssemblyInfo.cache
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\appsettings.Development.json
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\appsettings.json
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Elumini.Tarefa.API.exe
@@ -36,6 +29,8 @@ E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Mic
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\RabbitMQ.Client.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -48,6 +43,7 @@ E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Sys
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Runtime.Caching.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Threading.Channels.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Windows.Extensions.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -72,6 +68,13 @@ E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Elu
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Elumini.Tarefa.Application.pdb
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Elumini.Tarefa.Domain.pdb
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Elumini.Tarefa.Infraestrutura.pdb
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.csproj.AssemblyReference.cache
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.GeneratedMSBuildEditorConfig.editorconfig
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.AssemblyInfoInputs.cache
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.AssemblyInfo.cs
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.csproj.CoreCompileInputs.cache
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.MvcApplicationPartsAssemblyInfo.cs
+E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.MvcApplicationPartsAssemblyInfo.cache
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\staticwebassets.build.json
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\staticwebassets.development.json
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\staticwebassets\msbuild.Elumini.Tarefa.API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -86,6 +89,3 @@ E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\ref
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.pdb
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\Elumini.Tarefa.API.genruntimeconfig.cache
 E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\obj\Debug\net6.0\ref\Elumini.Tarefa.API.dll
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\Newtonsoft.Json.dll
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\RabbitMQ.Client.dll
-E:\dev\teste\Elummini\Elumini.Tarefa\src\Elumini.Tarefa.API\bin\Debug\net6.0\System.Threading.Channels.dll

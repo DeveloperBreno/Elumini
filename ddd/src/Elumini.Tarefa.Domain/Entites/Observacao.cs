@@ -16,6 +16,6 @@ namespace Elumini.Tarefa.Domain.Entites
         [Column("Words", TypeName = "varchar(500)")]
         [MinLength(0)]
         [MaxLength(500)]
-        public string Texto { get; private set; } = string.Empty;
+        public string Texto { get;  set; } = string.Empty;
     }
 }
