@@ -22,4 +22,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Elumini.Tarefa.Application\Elumini.Tarefa.Application.csproj" />
+    <ProjectReference Include="..\..\src\Elumini.Tarefa.Domain\Elumini.Tarefa.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Elumini.Tarefa.Infraestrutura\Elumini.Tarefa.Infraestrutura.csproj" />
+  </ItemGroup>
+
 </Project>
