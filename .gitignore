@@ -1,0 +1,22 @@
+# Ignorar pastas e arquivos de compilação e de output do projeto
+
+ddd/RemovedorDeTarefaWorker/obj/
+ddd/RemovedorDeTarefaWorker/bin/
+
+
+ddd/src/Elumini.Tarefa.Infraestrutura/obj/
+ddd/src/Elumini.Tarefa.Infraestrutura/bin/
+
+ddd/src/Elumini.Tarefa.API/obj/
+ddd/src/Elumini.Tarefa.API/bin/
+
+ddd/src/Elumini.Tarefa.Application/bin/
+ddd/src/Elumini.Tarefa.Application/obj/
+
+ddd/src/Elumini.Tarefa.API/bin/
+ddd/src/Elumini.Tarefa.API/obj/
+
+ddd/src/Elumini.Tarefa.Domain/bin/
+ddd/src/Elumini.Tarefa.Domain/obj/
+
+

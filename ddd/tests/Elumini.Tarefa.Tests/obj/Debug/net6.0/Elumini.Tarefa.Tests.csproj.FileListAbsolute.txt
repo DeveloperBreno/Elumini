@@ -164,3 +164,7 @@ E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\obj\Debug\net6.0
 E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\obj\Debug\net6.0\Elumini.Tarefa.Tests.pdb
 E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\obj\Debug\net6.0\Elumini.Tarefa.Tests.genruntimeconfig.cache
 E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\obj\Debug\net6.0\ref\Elumini.Tarefa.Tests.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\bin\Debug\net6.0\Microsoft.Extensions.Logging.Configuration.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\bin\Debug\net6.0\Microsoft.Extensions.Logging.Console.dll
+E:\dev\teste\Elummini\Elumini.Tarefa\tests\Elumini.Tarefa.Tests\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll

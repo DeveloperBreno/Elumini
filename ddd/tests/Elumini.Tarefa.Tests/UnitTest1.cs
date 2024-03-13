@@ -2,6 +2,7 @@ using Elumini.Tarefa.Application.Services;
 using Elumini.Tarefa.Domain.Interfaces;
 using Elumini.Tarefa.Domain.ViewModels;
 using Elumini.Tarefa.Infraestrutura.Repository;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Elumini.Tarefa.Tests
@@ -17,8 +18,17 @@ namespace Elumini.Tarefa.Tests
         {
             var services = new ServiceCollection();
 
-            // Configuração da injeção de dependência aqui
-            services.AddTransient<IMensageriaService, MensageriaService>();
+            var configuration = new ConfigurationBuilder()
+          .SetBasePath(Directory.GetCurrentDirectory())
+          .AddJsonFile("appsettings.json")
+          .Build();
+
+            services.AddTransient<IMensageriaService>(provider =>
+            {
+                return new MensageriaService(configuration);
+            });
+
+
             services.AddTransient<ITarefaRepository, TarefaRepository>();
             services.AddTransient<ITarefaService, TarefaService>();
 
@@ -47,7 +57,7 @@ namespace Elumini.Tarefa.Tests
             };
 
             var body = _mensageriaService.SerializeObjectToBytes(tarefaViewModel);
-            var result = _mensageriaService.InserirOuAtualizar(body, MensageriaQueue.CriarOrEditarTarefa).Result;
+            var result = _mensageriaService.InserirNaFila(body, MensageriaQueue.CriarOrEditarTarefa).Result;
 
             Assert.Equal(true, result);
         }
@@ -62,18 +72,54 @@ namespace Elumini.Tarefa.Tests
                 status = "To do",
                 data = DateTime.Now
             };
-
             var result = _tarefaService.InserirOuAtualizar(tarefaViewModel);
-
             Assert.Equal(true, result);
         }
 
 
         [Fact]
-        public void LerDaTarefas()
+        public void LerTarefas()
+        {
+            var tarefas = _tarefaService.Get();
+            Assert.True(tarefas.Length > 0);
+        }
+
+        [Fact]
+        public void LerTarefasPorRepository()
         {
             var tarefas = _tarefaRepository.Get();
             Assert.True(tarefas.Length > 0);
         }
+
+        [Fact]
+        public void LerUmaTarefaAleatoria()
+        {
+            var tarefas = _tarefaService.Get();
+            var random = new Random();
+            var indiceAleatorio = random.Next(0, tarefas.Length); // Gera um índice aleatório dentro do intervalo válido
+            var tarefaAleatoria = tarefas[indiceAleatorio]; // Seleciona a tarefa correspondente ao índice aleatório
+            var tarefaDoBanco = _tarefaService.GetById(tarefaAleatoria.Id);
+            Assert.True(tarefaDoBanco is not null);
+        }
+
+        [Fact]
+        public void LerDaFila()
+        {
+            var obj = _mensageriaService.ObterMensagemAssync(MensageriaQueue.CriarOrEditarTarefa);
+            Assert.True(!string.IsNullOrWhiteSpace(obj));
+        }
+
+
+        [Fact]
+        public void ExcluirUmaTarefaPorId()
+        {
+            var tarefas = _tarefaService.Get();
+            var random = new Random();
+            var indiceAleatorio = random.Next(0, tarefas.Length); // Gera um índice aleatório dentro do intervalo válido
+            var tarefaAleatoria = tarefas[indiceAleatorio]; // Seleciona a tarefa correspondente ao índice aleatório
+            var ok = _tarefaService.DeletarPorId(tarefaAleatoria.Id);
+            Assert.True(ok == true);
+        }
+
     }
 }

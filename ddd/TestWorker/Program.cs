@@ -2,15 +2,8 @@
 using Elumini.Tarefa.Domain.Interfaces;
 using Elumini.Tarefa.Infraestrutura.Repository;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using Microsoft.Extensions.Logging;
-
-using Elumini.Tarefa.Application.Services;
-using Elumini.Tarefa.Domain.Interfaces;
-using Elumini.Tarefa.Infraestrutura.Repository;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
+using Microsoft.Extensions.Configuration;
 
 public class Program
 {
@@ -31,8 +24,16 @@ public class Program
     {
         var services = new ServiceCollection();
 
-        // Configuração da injeção de dependência aqui
-        services.AddTransient<IMensageriaService, MensageriaService>();
+        var configuration = new ConfigurationBuilder()
+          .SetBasePath(Directory.GetCurrentDirectory())
+          .AddJsonFile("appsettings.json")
+          .Build();
+
+        services.AddTransient<IMensageriaService>(provider =>
+        {
+            return new MensageriaService(configuration);
+        });
+
         services.AddTransient<ITarefaService, TarefaService>();
         services.AddTransient<ITarefaRepository, TarefaRepository>();
 

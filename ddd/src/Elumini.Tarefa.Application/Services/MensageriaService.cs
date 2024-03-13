@@ -2,7 +2,9 @@
 using RabbitMQ.Client;
 using System.Text;
 using Newtonsoft.Json;
-using RabbitMQ.Client.Events;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+
 
 namespace Elumini.Tarefa.Application.Services
 {
@@ -13,24 +15,31 @@ namespace Elumini.Tarefa.Application.Services
         private readonly IConnection _connection;
         private readonly IModel _channel;
 
-        public MensageriaService()
+        public MensageriaService(IConfiguration configuration)
         {
-            _connectionFactory = new ConnectionFactory
+
+            try
             {
-                HostName = "localhost",
-                Port = 5672,
-                UserName = "guest", // Altere conforme necessário
-                Password = "guest"  // Altere conforme necessário
-            };
+                _connectionFactory = new ConnectionFactory
+                {
+                    HostName = configuration["RabbitMQ:HostName"],
+                    Port = int.Parse(configuration["RabbitMQ:Port"]),
+                    UserName = configuration["RabbitMQ:UserName"],
+                    Password = configuration["RabbitMQ:Password"]
+                };
 
-            // Alocar instância de conexão e canal no construtor
-            _connection = _connectionFactory.CreateConnection();
-            _channel = _connection.CreateModel();
+                _connection = _connectionFactory.CreateConnection();
+                _channel = _connection.CreateModel();
+            }
+            catch (Exception)
+            {
 
-
+            }
+            
         }
 
-        public async Task<bool> InserirOuAtualizar(byte[] body, MensageriaQueue queueName)
+
+        public async Task<bool> InserirNaFila(byte[] body, MensageriaQueue queueName)
         {
             try
             {

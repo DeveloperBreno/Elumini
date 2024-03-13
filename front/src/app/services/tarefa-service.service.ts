@@ -14,7 +14,6 @@ export class TarefaService {
 
   constructor(private http: HttpClient) { }
 
-
   GetTarefas() : Observable<Response<Tarefa[]>> {
       return this.http.get<Response<Tarefa[]>>(`${this.apiUrl}`);
   }
@@ -31,11 +30,7 @@ export class TarefaService {
       return this.http.put<Response<Tarefa[]>>(`${this.apiUrl}`, tarefa);
   }
 
-  InativaTarefa(id: number) : Observable<Response<Tarefa[]>>{
-      return this.http.put<Response<Tarefa[]>>(`${this.apiUrl}/InativaTarefa/${id}`, id);
-  }
-
   ExcluirTarefa(id: number) : Observable<Response<Tarefa[]>>{
-    return this.http.delete<Response<Tarefa[]>>(`${this.apiUrl}?id=${id}`)
+    return this.http.delete<Response<Tarefa[]>>(`${this.apiUrl}/${id}`)
   }
 }

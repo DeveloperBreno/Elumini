@@ -15,8 +15,6 @@ export class EditarComponent implements OnInit{
   tarefa!: Tarefa;
 
   constructor(private tarefaService : TarefaService, private router :Router,  private route : ActivatedRoute) {
-
-
   }
 
   ngOnInit(): void {
@@ -24,7 +22,6 @@ export class EditarComponent implements OnInit{
     this.tarefaService.GetTarefa(id).subscribe((data) => {
         this.tarefa = data.result;
         this.tarefa.data = this.tarefa.data?.substring(0, 16);
-        console.log(this.tarefa.data);
     });
   }
 

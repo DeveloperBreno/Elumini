@@ -2,6 +2,7 @@
 using Elumini.Tarefa.Domain.Interfaces;
 using Elumini.Tarefa.Infraestrutura.Context;
 using Elumini.Tarefa.Infraestrutura.Repository;
+using System.Configuration;
 
 namespace Elumini.Tarefa.API.Dependency
 {
@@ -12,6 +13,8 @@ namespace Elumini.Tarefa.API.Dependency
             services.AddScoped<ITarefaRepository, TarefaRepository>();
             services.AddScoped<ITarefaService, TarefaService>();
             services.AddScoped<IMensageriaService, MensageriaService>();
+
+            
 
             return services;    
         }

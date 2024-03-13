@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elumini.Tarefa.Infraestrutu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elumini.Tarefa.Tests", "tests\Elumini.Tarefa.Tests\Elumini.Tarefa.Tests.csproj", "{4ED5ED39-D576-480F-8734-F08DDDEB7F15}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - TestWorker", "5 - TestWorker", "{1965C3D2-109F-4245-825A-15B04A8F3469}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workers", "Workers", "{1965C3D2-109F-4245-825A-15B04A8F3469}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWorker", "TestWorker\TestWorker.csproj", "{A2B851A8-0C38-4D38-AE3D-D17C19615030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsereOrAtualizaTarefaWorker", "TestWorker\InsereOrAtualizaTarefaWorker.csproj", "{A2B851A8-0C38-4D38-AE3D-D17C19615030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemovedorDeTarefaWorker", "RemovedorDeTarefaWorker\RemovedorDeTarefaWorker.csproj", "{304A78DD-53B9-4542-AE39-8235461401D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{A2B851A8-0C38-4D38-AE3D-D17C19615030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B851A8-0C38-4D38-AE3D-D17C19615030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B851A8-0C38-4D38-AE3D-D17C19615030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304A78DD-53B9-4542-AE39-8235461401D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304A78DD-53B9-4542-AE39-8235461401D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304A78DD-53B9-4542-AE39-8235461401D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304A78DD-53B9-4542-AE39-8235461401D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{4ED5ED39-D576-480F-8734-F08DDDEB7F15} = {EF546206-30DE-4544-94D3-73D5981DA81A}
 		{1965C3D2-109F-4245-825A-15B04A8F3469} = {09FB4A55-C75C-4B01-B26C-0290F0608AC8}
 		{A2B851A8-0C38-4D38-AE3D-D17C19615030} = {1965C3D2-109F-4245-825A-15B04A8F3469}
+		{304A78DD-53B9-4542-AE39-8235461401D4} = {1965C3D2-109F-4245-825A-15B04A8F3469}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB9E866E-1013-415E-BF48-1B2704EEA488}

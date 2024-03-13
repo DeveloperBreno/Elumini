@@ -1,19 +1,19 @@
 ﻿using Elumini.Tarefa.Domain.Interfaces;
 using Elumini.Tarefa.Domain.ViewModels;
 using Newtonsoft.Json;
-using Microsoft.Extensions.Logging; // Adicionado para suporte a logging
+using Microsoft.Extensions.Logging; 
 
 public class WorkerService
 {
     private readonly IMensageriaService _mensageriaService;
     private readonly ITarefaService _tarefaService;
-    private readonly ILogger<WorkerService> _logger; // Adicionado logger
+    private readonly ILogger<WorkerService> _logger; 
 
     public WorkerService(
         IMensageriaService mensageriaService,
         ITarefaService tarefaService,
          ILogger<WorkerService> logger
-        ) // Adicionado logger no construtor
+        ) 
     {
         _mensageriaService = mensageriaService;
         _tarefaService = tarefaService;
@@ -22,7 +22,6 @@ public class WorkerService
 
     public async Task RunAsync()
     {
-        // Lógica do loop principal do worker
         while (true)
         {
             try
@@ -46,9 +45,6 @@ public class WorkerService
                         _logger.LogError("Erro ao processar a tarefa.");
                     }
                 }
-
-                // Aguarde um intervalo antes de verificar novamente a fila
-                await Task.Delay(TimeSpan.FromSeconds(10));
             }
             catch (Exception ex)
             {

@@ -13,6 +13,12 @@ namespace Elumini.Tarefa.Application.Services
             _tarefaRepository = tarefaRepository;
         }
 
+        public bool DeletarPorId(int tarefaId)
+        {
+            var ok = _tarefaRepository.DeteleById(tarefaId);
+            return ok;
+        }
+
         public Domain.Entites.Tarefa[] Get()
         {
             return _tarefaRepository.Get();

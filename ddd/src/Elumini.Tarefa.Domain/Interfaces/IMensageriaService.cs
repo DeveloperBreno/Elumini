@@ -4,11 +4,12 @@
     public enum MensageriaQueue
     {
         CriarOrEditarTarefa,
+        DeletarTarefa
     }
 
     public interface IMensageriaService
     {
-        Task<bool> InserirOuAtualizar(byte[] body, MensageriaQueue queueName);
+        Task<bool> InserirNaFila(byte[] body, MensageriaQueue queueName);
 
         byte[] SerializeObjectToBytes(object obj);
 

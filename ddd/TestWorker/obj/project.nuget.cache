@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iKaHRlEsUtcE1VXNn96SZaC3Hh+gkUDYgwPwUjQG3iMGhFAcDvrsDcxKpjFJWt8Dtdygb+vJzqU9IFiL36oBKg==",
+  "dgSpecHash": "ncEBKm2NYqcxnO+t3nT3APx37e4Byh1XJAXju4uJq5DLB0yFkC+2cPhZvyWe/ktO1RSRjkLiRAqk9WGgWAZECQ==",
   "success": true,
-  "projectFilePath": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\TestWorker.csproj",
+  "projectFilePath": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\InsereOrAtualizaTarefaWorker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\4578100589\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\4578100589\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -9,6 +9,7 @@ namespace Elumini.Tarefa.Domain.Interfaces
 {
     public interface ITarefaService
     {
+        bool DeletarPorId(int tarefaId);
         Entites.Tarefa[] Get();
 
         Entites.Tarefa? GetById(int id);

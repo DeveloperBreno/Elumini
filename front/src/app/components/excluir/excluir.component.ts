@@ -21,6 +21,7 @@ export class ExcluirComponent implements OnInit{
 
       this.tarefaService.GetTarefa(this.inputdata.id).subscribe(data => {
           this.tarefa = data.result;
+          this.tarefa.data = this.tarefa.data?.substring(0, 16);
       });
   }
 

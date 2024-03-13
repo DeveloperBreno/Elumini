@@ -34,11 +34,8 @@ namespace Elumini.Tarefa.Infraestrutura.Repository
                 .Include(o => o.Observacao).FirstOrDefault(o => o.Id.Equals(id));
         }
 
-        public async Task Inserir(Domain.Entites.Tarefa tarefa)
-        {
-            _dbContext.Tarefas.Add(tarefa);
-            await _dbContext.SaveChangesAsync();
-        }
+
+
 
         public Task<bool> InserirOrAtualizarAssync(TarefaViewModel tarefaViewModel)
         {
@@ -55,7 +52,7 @@ namespace Elumini.Tarefa.Infraestrutura.Repository
                     return Task.FromResult(false);
                 }
 
-                tarefa.Date = tarefaViewModel.data;
+                tarefa.Date = DateTime.Now;
                 tarefa.StatusId = status.Id;
                 tarefa.Observacao.Texto = tarefaViewModel.texto;
 
@@ -70,7 +67,7 @@ namespace Elumini.Tarefa.Infraestrutura.Repository
                 var tarefa = new Domain.Entites.Tarefa()
                 {
                     ParametroStatus = status,
-                    Date = tarefaViewModel.data,
+                    Date = DateTime.Now,
                     Observacao = new Observacao()
                     {
                         Texto = tarefaViewModel.texto
@@ -82,6 +79,21 @@ namespace Elumini.Tarefa.Infraestrutura.Repository
 
             return Task.FromResult(true);
 
+        }
+
+        public bool DeteleById(int id)
+        {
+            try
+            {
+                var tarefa = GetById(id);
+                _dbContext.Tarefas.Remove(tarefa);
+                _ = _dbContext.SaveChangesAsync().Result;
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

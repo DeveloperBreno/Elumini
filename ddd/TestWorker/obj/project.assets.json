@@ -1159,7 +1159,6 @@
         "dependencies": {
           "Elumini.Tarefa.Domain": "1.0.0",
           "Elumini.Tarefa.Infraestrutura": "1.0.0",
-          "Newtonsoft.Json": "13.0.3",
           "RabbitMQ.Client": "6.8.1"
         },
         "compile": {
@@ -1188,8 +1187,11 @@
           "Microsoft.EntityFrameworkCore": "6.0.27",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.27",
           "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
-          "Microsoft.Extensions.Configuration.Json": "6.0.0"
+          "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "Microsoft.Extensions.Logging.Console": "6.0.0",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/Elumini.Tarefa.Infraestrutura.dll": {}
@@ -3093,8 +3095,7 @@
       "Elumini.Tarefa.Application >= 1.0.0",
       "Elumini.Tarefa.Domain >= 1.0.0",
       "Elumini.Tarefa.Infraestrutura >= 1.0.0",
-      "Microsoft.Extensions.DependencyInjection >= 6.0.1",
-      "Microsoft.Extensions.Logging.Console >= 6.0.0"
+      "Microsoft.Extensions.DependencyInjection >= 6.0.1"
     ]
   },
   "packageFolders": {
@@ -3104,9 +3105,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\TestWorker.csproj",
-      "projectName": "TestWorker",
-      "projectPath": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\TestWorker.csproj",
+      "projectUniqueName": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\InsereOrAtualizaTarefaWorker.csproj",
+      "projectName": "InsereOrAtualizaTarefaWorker",
+      "projectPath": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\InsereOrAtualizaTarefaWorker.csproj",
       "packagesPath": "C:\\Users\\4578100589\\.nuget\\packages\\",
       "outputPath": "E:\\dev\\teste\\Elummini\\Elumini.Tarefa\\TestWorker\\obj\\",
       "projectStyle": "PackageReference",
@@ -3160,10 +3161,6 @@
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[6.0.1, )"
-          },
-          "Microsoft.Extensions.Logging.Console": {
-            "target": "Package",
-            "version": "[6.0.0, )"
           }
         },
         "imports": [

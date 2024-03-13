@@ -9,5 +9,6 @@ namespace Elumini.Tarefa.Domain.Interfaces
 
         Entites.Tarefa[] Get();
         Entites.Tarefa? GetById(int id);
+        bool DeteleById(int id);
     }
 }

@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
-import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { TarefaFormComponent } from './components/tarefa-form/tarefa-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,7 +27,6 @@ import { ExcluirComponent } from './components/excluir/excluir.component';
     AppComponent,
     HomeComponent,
     CadastroComponent,
-    DetalhesComponent,
     EditarComponent,
     TarefaFormComponent,
     ExcluirComponent

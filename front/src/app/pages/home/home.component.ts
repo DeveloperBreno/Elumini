@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit{
 
   tarefas: Tarefa[] = [];
   tarefasGeral: Tarefa[] = [];
-  columnsToDisplay = ['texto', 'status', 'data', 'Ações'];
+  columnsToDisplay = ['texto', 'status', 'data', 'Ações', 'Excluir'];
 
   constructor(private tarefaService : TarefaService, public matDialog: MatDialog) { }
 
